@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itens_card"
+    android:layout_width="match_parent"
+    android:layout_height="206dp"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="2dp"
+    android:layout_marginTop="17dp"
+    android:layout_marginRight="2dp"
+    android:background="#EDDBC3"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivContato"
+        android:layout_width="141dp"
+        android:layout_height="136dp"
+        android:src="@drawable/addsomeone"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.059"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="false"
+        android:backgroundTint="#A9E1DC"
+        android:text="Editar"
+        android:textAlignment="center"
+        android:textColor="#051F80"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        android:visibility="visible"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.948"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="0.974">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="false"
+        android:backgroundTint="#FFA726"
+        android:text="Deletar"
+        android:textAlignment="center"
+        android:textColor="#051F80"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        android:visibility="visible"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.58"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="0.974">
+
+    </Button>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNome"
+        android:layout_width="206dp"
+        android:layout_height="48dp"
+        android:padding="4dp"
+        android:textColorHint="#000000"
+        card_view:endIconTint="#000000"
+        card_view:layout_constraintBottom_toTopOf="@+id/tilFone"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.896"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="0.5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:hint="Nome Contato"
+            android:inputType="text"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFone"
+        android:layout_width="206dp"
+        android:layout_height="48dp"
+        android:padding="4dp"
+        android:textColorHint="#000000"
+        card_view:endIconTint="#000000"
+        card_view:layout_constraintBottom_toTopOf="@+id/tilEmail"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.896"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/tilNome"
+        card_view:layout_constraintVertical_bias="0.5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietFone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:digits="-()0123456789"
+            android:hint="Telefone Contato"
+            android:inputType="phone"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        android:layout_width="206dp"
+        android:layout_height="48dp"
+        android:padding="4dp"
+        android:textColorHint="#000000"
+        card_view:endIconTint="#000000"
+        card_view:layout_constraintBottom_toTopOf="@+id/btnSalvar"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.896"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/tilFone"
+        card_view:layout_constraintVertical_bias="0.5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:hint="E-mail Contato"
+            android:inputType="text|textNoSuggestions"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
